@@ -1,0 +1,1 @@
+execute if score @s copypack.hard_cheese.hit_count matches 1.. run function copypack:blocks/hard_cheese/break/check

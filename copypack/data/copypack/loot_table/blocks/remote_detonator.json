@@ -1,0 +1,44 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:item_frame",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": {
+                  "translate": "item.copypack.block.remote_detonator",
+                  "fallback": "Remote Detonator"
+                },
+                "minecraft:item_model": "copypack:blocks/remote_detonator/remote_detonator_item",
+                "minecraft:custom_data": {
+                  "remote_detonator": {
+                    "remote_detonator": true
+                  },
+                  "smithed": {
+                    "ignore": {
+                      "functionality": true,
+                      "crafting": true
+                    }
+                  }
+                },
+                "minecraft:entity_data": {
+                  "id": "minecraft:item_frame",
+                  "Tags": [
+                    "copypack.remote_detonator_setup"
+                  ],
+                  "Silent": true,
+                  "Invisible": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+execute as @n[tag=copypack.remote_detonator] run function copypack:blocks/remote_detonator/trigger/trigger

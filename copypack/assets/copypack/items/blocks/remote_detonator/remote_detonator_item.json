@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "copypack:item/blocks/remote_detonator/remote_detonator_item"
+  }
+}

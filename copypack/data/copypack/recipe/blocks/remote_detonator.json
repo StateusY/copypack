@@ -1,0 +1,44 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "minecraft:iron_chain",
+    "X": "minecraft:sandstone",
+    "$": "minecraft:stripped_dark_oak_log"
+  },
+  "pattern": [
+    "XXX",
+    "$X%",
+    "$ $"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:item_frame",
+    "components": {
+      "minecraft:item_name": {
+        "translate": "item.copypack.block.remote_detonator",
+        "fallback": "Remote Detonator"
+      },
+      "minecraft:item_model": "copypack:blocks/remote_detonator/remote_detonator_item",
+      "minecraft:custom_data": {
+        "remote_detonator": {
+          "remote_detonator": true
+        },
+        "smithed": {
+          "ignore": {
+            "functionality": true,
+            "crafting": true
+          }
+        }
+      },
+      "minecraft:entity_data": {
+        "id": "minecraft:item_frame",
+        "Tags": [
+          "copypack.remote_detonator_setup"
+        ],
+        "Silent": true,
+        "Invisible": true
+      }
+    }
+  }
+}

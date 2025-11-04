@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "copypack:item/blocks/hard_cheese/hard_cheese_block"
+  }
+}

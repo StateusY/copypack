@@ -1,0 +1,67 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "minecraft:milk_bucket"
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 9,
+    "id": "minecraft:item_frame",
+    "components": {
+      "minecraft:item_name": {
+        "translate": "item.copypack.block.hard_cheese",
+        "fallback": "Block of Hard Cheese"
+      },
+      "minecraft:item_model": "copypack:blocks/hard_cheese/hard_cheese_item",
+      "minecraft:custom_data": {
+        "remote_detonator": {
+          "hard_cheese": true
+        },
+        "smithed": {
+          "ignore": {
+            "functionality": true,
+            "crafting": true
+          }
+        }
+      },
+      "minecraft:entity_data": {
+        "id": "minecraft:item_frame",
+        "Tags": [
+          "copypack.hard_cheese_setup"
+        ],
+        "Silent": true,
+        "Invisible": true
+      },
+      "minecraft:consumable": {
+        "consume_seconds": 3,
+        "animation": "eat",
+        "sound": "minecraft:entity.generic.eat",
+        "has_consume_particles": true,
+        "on_consume_effects": [
+          {
+            "type": "minecraft:apply_effects",
+            "effects": [
+              {
+                "id": "minecraft:haste",
+                "duration": 30,
+                "ambient": false,
+                "show_particles": false,
+                "show_icon": false
+              }
+            ]
+          }
+        ]
+      },
+      "minecraft:food": {
+        "nutrition": 6,
+        "saturation": 6,
+        "can_always_eat": true
+      }
+    }
+  }
+}

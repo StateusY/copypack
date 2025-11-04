@@ -1,0 +1,1 @@
+execute if score @s copypack.remote_detonator.hit_count matches 1.. run function copypack:blocks/remote_detonator/break/check

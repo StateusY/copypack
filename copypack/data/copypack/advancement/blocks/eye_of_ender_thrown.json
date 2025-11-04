@@ -1,0 +1,12 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:used_ender_eye",
+      "conditions": {
+      }
+    }
+  },
+  "rewards": {
+    "function": "copypack:blocks/remote_detonator/trigger/raycast"
+  }
+}
