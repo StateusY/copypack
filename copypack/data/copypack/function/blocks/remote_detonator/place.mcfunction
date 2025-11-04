@@ -2,7 +2,7 @@
 kill @s
 
 # play place block sound
-playsound minecraft:block.stone.place block @a ~ ~ ~ 1 2
+playsound minecraft:block.netherite_block.place block @a ~ ~ ~ 1 1
 
 # spawn the block's item display
 execute unless block ~ ~ ~ #minecraft:replaceable run return run loot spawn ~ ~ ~ loot copypack:blocks/remote_detonator

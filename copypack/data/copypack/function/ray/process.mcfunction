@@ -1,4 +1,4 @@
-scoreboard players set @s copypack.raycast.steps 64
+scoreboard players set @s copypack.raycast.steps 500
 
 execute at @s run function copypack:ray/move
 

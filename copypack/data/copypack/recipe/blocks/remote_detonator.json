@@ -2,14 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "minecraft:iron_chain",
-    "X": "minecraft:sandstone",
-    "$": "minecraft:stripped_dark_oak_log"
+    "#": "minecraft:iron_ingot",
+    "X": "minecraft:redstone",
+    "$": "minecraft:ender_pearl",
+    "*": "minecraft:obsidian"
   },
   "pattern": [
-    "XXX",
-    "$X%",
-    "$ $"
+    "#X#",
+    "X$X",
+    "#*#"
   ],
   "result": {
     "count": 1,

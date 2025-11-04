@@ -1,7 +1,6 @@
-say BOOOOOOOOOOOOOOOOOM!
-
 # delete the thrown eye
 execute at @p[tag=copypack.remote_detonator.thrown_eye] run kill @n[type=eye_of_ender]
+execute at @p[tag=copypack.remote_detonator.thrown_eye] run playsound minecraft:entity.ender_eye.death block @a ~ ~ ~
 # remove thrown_eye tag
 execute as @p[tag=copypack.remote_detonator.thrown_eye] run tag @s remove copypack.remote_detonator.thrown_eye
 
