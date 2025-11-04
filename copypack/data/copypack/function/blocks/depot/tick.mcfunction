@@ -1,0 +1,1 @@
+execute if score @s copypack.depot.hit_count matches 1.. run function copypack:blocks/depot/break/check

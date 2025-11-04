@@ -1,0 +1,44 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "minecraft:iron_ingot",
+    "X": "minecraft:stripped_spruce_wood",
+    "$": "minecraft:iron_nugget"
+  },
+  "pattern": [
+    " # ",
+    "$X$",
+    " $"
+  ],
+  "result": {
+    "count": 9,
+    "id": "minecraft:item_frame",
+    "components": {
+      "minecraft:item_name": {
+        "translate": "item.copypack.block.depot",
+        "fallback": "Depot"
+      },
+      "minecraft:item_model": "copypack:blocks/depot/depot_item",
+      "minecraft:custom_data": {
+        "copypack": {
+          "depot": true
+        },
+        "smithed": {
+          "ignore": {
+            "functionality": true,
+            "crafting": true
+          }
+        }
+      },
+      "minecraft:entity_data": {
+        "id": "minecraft:item_frame",
+        "Tags": [
+          "copypack.depot_setup"
+        ],
+        "Silent": true,
+        "Invisible": true
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "copypack:item/blocks/depot/depot_block"
+  }
+}

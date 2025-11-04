@@ -34,70 +34,98 @@ from pathlib import Path
 NAMESPACE = "copypack" # change me
 
 blocks = [
+    #{
+    #     "name": "Remote Detonator",
+    #     "id": "remote_detonator",
+    #     "seperate_item_model": False,
+    #     "consumable_component": None,
+    #     "food_component": None,
+    #     "interact": False,
+    #     "interaction_function": None,
+    #     "can_float": True,
+
+    #     "hit_count": 3,
+        
+    #     "place_block_sound": "minecraft:block.stone.place block @a ~ ~ ~ 1 2",
+    #     "hit_block_sound": "minecraft:block.stone.hit block @a ~ ~ ~ 1 2",
+    #     "hit_block_particle": "minecraft:item{item:{id:\"minecraft:sandstone\"}} ~ ~-0.25 ~ 0.3 0.1 0.3 0.1 5",
+    #     "break_block_sound": "minecraft:block.stone.break block @a ~ ~ ~ 1 2",
+    #     "break_block_particle": "minecraft:item{item:{id:\"minecraft:sandstone\"}} ~ ~-0.25 ~ 0.3 0.1 0.3 0.1 20",
+
+    #     "has_recipe": True,
+    #     "recipe_output_quantity": 1,
+    #     "recipe_key": {"#": "minecraft:iron_chain",
+    #                    "X": "minecraft:sandstone",
+    #                    "$": "minecraft:stripped_dark_oak_log"
+    #                    },
+    #     "recipe_pattern": [
+    #         "XXX",
+    #         "$X%",
+    #         "$ $"
+    #     ]
+    # },
+    # {
+    #     "name": "Block of Hard Cheese",
+    #     "id": "hard_cheese",
+    #     "seperate_item_model": False,
+    #     "consumable_component": {
+    #                                 "consume_seconds": 3,
+    #                                 "animation": "eat",
+    #                                 "sound": "minecraft:entity.generic.eat",
+    #                                 "has_consume_particles": True,
+    #                                 "on_consume_effects": [
+    #                                 {
+    #                                     "type": "minecraft:apply_effects",
+    #                                     "effects": [
+    #                                     {
+    #                                         "id": "minecraft:haste",
+    #                                         "duration": 30,
+    #                                         "ambient": False,
+    #                                         "show_particles": False,
+    #                                         "show_icon": False
+    #                                     }
+    #                                     ]
+    #                                 }
+    #                                 ]
+    #                             },
+    #     "food_component": {
+    #                         "nutrition": 6,
+    #                         "saturation": 6,
+    #                         "can_always_eat": True
+    #                     },
+    #     "interact": False,
+    #     "interaction_function": None,
+    #     "can_float": True,
+
+    #     "hit_count": 10,
+        
+    #     "place_block_sound": "minecraft:block.candle.place block @a ~ ~ ~ 1 2",
+    #     "hit_block_sound": "block.candle.hit block @a ~ ~ ~ 1 2",
+    #     "hit_block_particle": "minecraft:item{item:{id:\"minecraft:yellow_concrete\"}} ~ ~-0.25 ~ 0.3 0.1 0.3 0.1 5",
+    #     "break_block_sound": "block.candle.hit block @a ~ ~ ~ 1 2",
+    #     "break_block_particle": "minecraft:item{item:{id:\"minecraft:yellow_concrete\"}} ~ ~-0.25 ~ 0.3 0.1 0.3 0.1 20",
+
+    #     "has_recipe": True,
+    #     "recipe_output_quantity": 9,
+    #     "recipe_key": {"#": "minecraft:milk_bucket"
+    #                    },
+    #     "recipe_pattern": [
+    #         "###",
+    #         "###",
+    #         "###"
+    #     ]
+    # },
     {
-        "name": "Remote Detonator",
-        "id": "remote_detonator",
+        "name": "Depot",
+        "id": "depot",
         "seperate_item_model": False,
         "consumable_component": None,
         "food_component": None,
-        "interact": False,
-        "interaction_function": None,
+        "interact": True,
+        "interaction_function": "copypack:blocks/depot/interact/interact",
         "can_float": True,
 
         "hit_count": 3,
-        
-        "place_block_sound": "minecraft:block.stone.place block @a ~ ~ ~ 1 2",
-        "hit_block_sound": "minecraft:block.stone.hit block @a ~ ~ ~ 1 2",
-        "hit_block_particle": "minecraft:item{item:{id:\"minecraft:sandstone\"}} ~ ~-0.25 ~ 0.3 0.1 0.3 0.1 5",
-        "break_block_sound": "minecraft:block.stone.break block @a ~ ~ ~ 1 2",
-        "break_block_particle": "minecraft:item{item:{id:\"minecraft:sandstone\"}} ~ ~-0.25 ~ 0.3 0.1 0.3 0.1 20",
-
-        "has_recipe": True,
-        "recipe_output_quantity": 1,
-        "recipe_key": {"#": "minecraft:iron_chain",
-                       "X": "minecraft:sandstone",
-                       "$": "minecraft:stripped_dark_oak_log"
-                       },
-        "recipe_pattern": [
-            "XXX",
-            "$X%",
-            "$ $"
-        ]
-    },
-    {
-        "name": "Block of Hard Cheese",
-        "id": "hard_cheese",
-        "seperate_item_model": False,
-        "consumable_component": {
-                                    "consume_seconds": 3,
-                                    "animation": "eat",
-                                    "sound": "minecraft:entity.generic.eat",
-                                    "has_consume_particles": True,
-                                    "on_consume_effects": [
-                                    {
-                                        "type": "minecraft:apply_effects",
-                                        "effects": [
-                                        {
-                                            "id": "minecraft:haste",
-                                            "duration": 30,
-                                            "ambient": False,
-                                            "show_particles": False,
-                                            "show_icon": False
-                                        }
-                                        ]
-                                    }
-                                    ]
-                                },
-        "food_component": {
-                            "nutrition": 6,
-                            "saturation": 6,
-                            "can_always_eat": True
-                        },
-        "interact": False,
-        "interaction_function": None,
-        "can_float": True,
-
-        "hit_count": 10,
         
         "place_block_sound": "minecraft:block.candle.place block @a ~ ~ ~ 1 2",
         "hit_block_sound": "block.candle.hit block @a ~ ~ ~ 1 2",
@@ -107,12 +135,15 @@ blocks = [
 
         "has_recipe": True,
         "recipe_output_quantity": 9,
-        "recipe_key": {"#": "minecraft:milk_bucket"
-                       },
+        "recipe_key": {
+                        "#": "minecraft:iron_ingot",
+                        "X": "minecraft:stripped_spruce_wood",
+                        "$": "minecraft:iron_nugget"
+                    },
         "recipe_pattern": [
-            "###",
-            "###",
-            "###"
+            " # ",
+            "$X$",
+            " $"
         ]
     }
 ]
